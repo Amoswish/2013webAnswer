@@ -14,6 +14,7 @@ namespace WebApplication1
         protected void Page_Load(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection("Data Source=LENOVO-PC\\SQLEXPRESS;Initial Catalog=Northwind;Integrated Security=True");
+            //SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["NorthwindConnectionString"].ConnectionString);
             SqlCommand com = new SqlCommand("select * from Employees where EmployeeID = @productName", con);
             com.Parameters.Add("@productName", SqlDbType.Int).Value = 2;
             SqlDataAdapter adapter = new SqlDataAdapter(com);
