@@ -17,7 +17,7 @@
                     <asp:BoundField DataField="UnitPrice" HeaderText="UnitPrice" SortExpression="UnitPrice" />
                     <asp:TemplateField ShowHeader="False">
                         <ItemTemplate>
-                            <asp:Button ID="LinkButton1" runat="server" CausesValidation="False" CommandArgument='<%# Eval("ProductID") %>' OnCommand="LinkButton1_Command" Text="查看" OnClientClick="verfy()"></asp:Button>
+                            <asp:Button ID="LinkButton1" runat="server" CausesValidation="False" CommandArgument='<%# Eval("ProductID") %>' OnCommand="LinkButton1_Command" Text="查看" OnClientClick="return verfy()"></asp:Button>
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>
